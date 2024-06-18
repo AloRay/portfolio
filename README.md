@@ -1,10 +1,14 @@
-<div style="display: flex; align-items: center;">
-  <img src="{{ site.logo }}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-right: 20px;">
-  <div>
-    <h1>Ray_Alo</h1>
-    <p>{{ site.description }}</p>
-  </div>
-</div>
+<style>
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+  }
+</style>
+
+<img src="/assets/images/Ray_Alo.jpg" alt="Profile Picture" class="profile-pic">
 # Data Scientist
 
 #### Technical Skills: Python, SQL, Excel, Power BI, AWS, Snowflake, MongoDB, Apache Spark, Trello, Tableau, Azure
