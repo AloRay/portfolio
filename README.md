@@ -1,5 +1,5 @@
 <style>
-  .profile-pic {
+  .logo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
