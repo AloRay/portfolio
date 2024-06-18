@@ -1,7 +1,7 @@
 <div style="display: flex; align-items: center;">
   <img src="{{ site.logo }}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-right: 20px;">
   <div>
-    <h1>Raymond Alo</h1>
+    <h1>Ray_Alo</h1>
     <p>{{ site.description }}</p>
   </div>
 </div>
