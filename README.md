@@ -1,4 +1,4 @@
-![Profile Picture]({{ site.logo }})
+<img src="{{ site.logo }}" alt="Profile Picture" style="width:200px;height:auto;">
 # Data Scientist
 
 #### Technical Skills: Python, SQL, Excel, Power BI, AWS, Snowflake, MongoDB, Apache Spark, Trello, Tableau, Azure
