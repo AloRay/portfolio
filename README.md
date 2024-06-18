@@ -4,7 +4,8 @@
 
 
 ## Education
-- MBA, Marketing | Ilorin Business School, Ilorin, Nigeria (_February 2024_)								       		        		
+- MBA, Marketing | Ilorin Business School, Ilorin, Nigeria (_February 2024_)
+- Certificate in Data Analysis | Hands-on Institute of Information technology (HiiT), Lagos, Nigeria (_September 2020_)							       		        		
 - B.Sc., Anatomy | University of Ilorin, Ilorin, Nigeria (_October 2018_)
 
 
@@ -18,7 +19,7 @@
 
 **Data Scientist @ Outsource Global Technology Ltd. (_February 2020 - March 2021_)**
 - Created new metrics and KPIs that allowed our clients across diverse industries to track what business processes to optimize, leading to an increase in customer satisfaction and thus, an increase in clients’ revenues by over 10%.
-- Automation of reports and creation of dashboards used by stakeholders and clients.
+- Automated reports and created dashboards used by stakeholders and clients.
 - Optimized machine learning pipelines and computational resources deployment strategies, reducing processing times by 20%.
 
 **Data Entry Associate @ Resource Intermediaries Ltd. (_November 2018 - December 2019_)**
