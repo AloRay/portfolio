@@ -1,13 +1,3 @@
-<style>
-  .logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 20px;
-  }
-</style>
-
 <img src="/assets/images/Ray_Alo.jpg" alt="Profile Picture" class="profile-pic">
 # Data Scientist
 
@@ -23,21 +13,19 @@
 
 ## Work Experience
 **Business Analyst / Facility Operations Manager @ JMK Constructions and Hospitality (_April 2021 - Present_)**
-- Spearheaded a team of over 50, fostering a culture of continuous improvement and operational excellence, improving service delivery by 25%.
-- Managed annual budgeting, resulting in a consistent 15% under-budget expenditure across multiple sites.
-- Delivered analysis of market, sales, and consumer trend impact on long and short-term strategies.
-- Contributed to a 43% increase in revenue generation by developing complex dashboards and reporting tools to track business performance metrics which assisted sales teams in crafting targeted proposals based on client needs.
+- Improved service delivery by 25% based on customer satisfaction scores and managed annual budgeting across multiple sites, consistently achieving 15% under-budget expenditure.
+- Developed 10 complex dashboards and reporting tools tracking 25 key business performance metrics, enabling sales teams to craft targeted proposals, contributing to a 43% increase in revenue.
+- Created 5 data models to support decision-making processes, planned maintenance for 35 facilities, and maintained records for 200 staff members.
 
 **Data Scientist @ Outsource Global Technology Ltd. (_February 2020 - March 2021_)**
-- Created new metrics and KPIs that allowed our clients across diverse industries to track what business processes to optimize, leading to an increase in customer satisfaction and thus, an increase in clients’ revenues by over 10%.
-- Automated reports and created dashboards used by stakeholders and clients.
-- Optimized machine learning pipelines and computational resources deployment strategies, reducing processing times by 20%.
+- Developed 18 new metrics and 12 KPIs that enabled 25 clients to track and optimize business processes, leading to over 10% increase in client revenues from $8M to $8.8M through improved customer satisfaction.
+- Optimized machine learning pipelines and computational resource deployment strategies, reducing processing times by 20% (from 5 to 4 hours).
+- Cleaned and transformed large datasets, and analyzed data to uncover over 5 hidden trends and patterns, providing clients with actionable insights and recommendations
 
 **Data Entry Associate @ Resource Intermediaries Ltd. (_November 2018 - December 2019_)**
-- Developed and optimized data entry operations, reducing time wastage by 25%.
-- Performed quick analysis using pivot table and power pivot while enhancing team efficiency by completing high-volume data entry tasks within tight deadlines.
-- Resolved discrepancies between physical documents and digital records through research and investigation while reducing errors by conducting thorough quality control checks on all entered and updated data.
-- Developed expertise in managing large datasets, enabling accurate analysis for informed decision-making processes within the organization.
+- Optimized data entry operations, reducing time wastage by 25% (from 8 to 6 hours per day) through process improvements and performed data analysis using pivot tables and power pivot on 20 datasets, enhancing team efficiency by completing 15,000 high-volume data entry tasks within tight deadlines.
+- Resolved 500 discrepancies between physical documents and digital records through research and investigation, reducing errors by 40% through quality control checks on all entered and updated data points.
+- Developed expertise in managing large datasets, enabling accurate analysis for informed decisionmaking processes within the organization.
 
 
 
