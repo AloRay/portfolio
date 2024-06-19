@@ -1,4 +1,5 @@
-<img src="/assets/images/Ray_Alo.jpg" alt="Profile Picture" class="profile-pic">
+<img src="/assets/images/RayAlo.jpg" alt="Profile Picture" class="profile-pic">
+
 # Data Scientist
 
 #### Technical Skills: Python, SQL, Excel, Power BI, AWS, Snowflake, MongoDB, Apache Spark, Trello, Tableau, Azure
