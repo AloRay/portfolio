@@ -50,4 +50,7 @@ This project focuses on building a fraud detection model for credit card transac
 ###  Gas Price Forecasting
 [Publication](https://github.com/AloRay/GAS-PRICE-FORECASTING)
 
+### Other Projects
+[Publication](https://github.com/AloRay?tab=repositories)
+
 This repository utilizes time series analysis to predict natural gas prices, aiding informed decisions in the energy market. Through meticulous data preprocessing, visualization, and ARIMA modeling, it provides accurate forecasts. With regression and interpolation techniques, it offers deeper insights for stakeholders, enabling proactive strategies. I also utilized linear regression, bilinear interpolation, mean square error, mean absolute error root, mean square error, etc. for analysis and forecasting.
