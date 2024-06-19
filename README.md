@@ -1,4 +1,4 @@
-<img src="/assets/images/RayAlo.jpg" alt="Profile Picture" class="profile-pic">
+![Profile Picture]({{ site.logo }})
 
 # Data Scientist
 
