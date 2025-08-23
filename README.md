@@ -14,7 +14,7 @@
 
 
 ## Work Experience
-**Data Management Specialist @ Nextbewe (_January 2024 - Present_)**
+**Data Management Specialist @ Nextbewe (_January 2025 - Present_)**
 - Built and maintained automated data pipelines on GCP (BigQuery, Dataflow), reducing batch processing time by 45%.
 - Implemented data governance and validation checks increasing trusted data availability by 30%.
 - Collaborated with stakeholders to define metrics, SLAs and reporting cadence.
@@ -22,7 +22,7 @@
 - Designed and enforced data governance frameworks with validation checks, boosting data reliability by 30%.
 
 
-**Team Lead, Business Operations @ Briccs International Ideal Limited (_July 2025 - October 2025_)**
+**Team Lead, Business Operations @ Briccs International Ideal Limited (_July 2024 - October 2024_)**
 - Led ingestion of telecom and SMS usage logs into BigQuery; standardized schemas and automated nightly loads.
 - Improved client satisfaction by 30% through data-driven issue resolution and operational reporting.
 - Prototyped dashboards in Python/Excel and migrated dashboards to Looker Studio for stakeholders.
