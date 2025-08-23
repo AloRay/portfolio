@@ -14,20 +14,31 @@
 
 
 ## Work Experience
-**Business Analyst / Facility Operations Manager @ JMK Constructions and Hospitality (_April 2021 - Present_)**
-- Improved service delivery by 25% based on customer satisfaction scores and managed annual budgeting across multiple sites, consistently achieving 15% under-budget expenditure.
-- Developed 10 complex dashboards and reporting tools tracking 25 key business performance metrics, enabling sales teams to craft targeted proposals, contributing to a 43% increase in revenue.
-- Created 5 data models to support decision-making processes, planned maintenance for 35 facilities, and maintained records for 200 staff members.
+**Data Management Specialist @ Nextbewe (_January 2024 - Present_)**
+- Built and maintained automated data pipelines on GCP (BigQuery, Dataflow), reducing batch processing time by 45%.
+- Implemented data governance and validation checks increasing trusted data availability by 30%.
+- Collaborated with stakeholders to define metrics, SLAs and reporting cadence.
+- Implemented secure data storage and retrieval systems, ensuring compliance with HIPAA and protecting sensitive information.
+- Designed and enforced data governance frameworks with validation checks, boosting data reliability by 30%.
 
-**Data Scientist @ Outsource Global Technology Ltd. (_February 2020 - March 2021_)**
-- Developed 18 new metrics and 12 KPIs that enabled 25 clients to track and optimize business processes, leading to over 10% increase in client revenues from $8M to $8.8M through improved customer satisfaction.
-- Optimized machine learning pipelines and computational resource deployment strategies, reducing processing times by 20% (from 5 to 4 hours).
-- Cleaned and transformed large datasets, and analyzed data to uncover over 5 hidden trends and patterns, providing clients with actionable insights and recommendations
 
-**Data Entry Associate @ Resource Intermediaries Ltd. (_November 2018 - December 2019_)**
-- Optimized data entry operations, reducing time wastage by 25% (from 8 to 6 hours per day) through process improvements and performed data analysis using pivot tables and power pivot on 20 datasets, enhancing team efficiency by completing 15,000 high-volume data entry tasks within tight deadlines.
-- Resolved 500 discrepancies between physical documents and digital records through research and investigation, reducing errors by 40% through quality control checks on all entered and updated data points.
-- Developed expertise in managing large datasets, enabling accurate analysis for informed decisionmaking processes within the organization.
+**Team Lead, Business Operations @ Briccs International Ideal Limited (_July 2025 - October 2025_)**
+- Led ingestion of telecom and SMS usage logs into BigQuery; standardized schemas and automated nightly loads.
+- Improved client satisfaction by 30% through data-driven issue resolution and operational reporting.
+- Prototyped dashboards in Python/Excel and migrated dashboards to Looker Studio for stakeholders.
+- Built customer segmentation models (k-means) and prediction models to improve ad targeting.
+- Analyzed delivery-rate disparities and proposed route optimizations to improve service reliability.
+- Developed Looker Studio dashboards that surfaced product performance metrics and improved decision-making cadence.
+- Integrated CRM and marketing tools to sync customer segments for targeted campaigns, improving engagement by 15%.
+
+
+**Business Analyst @ JMK Construction & Hospitality (_April 2022 - March 2024_)**
+- Designed and maintained interactive dashboards (Looker Studio, Tableau) enabling non-technical stakeholders to explore facility and cost metrics.
+- Diagnosed pipeline anomalies and implemented validation rules to improve data accuracy and trust in reports.
+- Built predictive models for resource allocation, reducing project overspend by 15%.
+- Delivered ad-hoc analyses on market trends and operational performance to leadership.
+- Analyzed large advertising datasets and created optimized SQL queries to support near real-time dashboards.
+- Led churn analysis projects using survival analysis and ensemble models to improve customer retention.
 
 
 
