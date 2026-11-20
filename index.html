@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raymond Alo — Operations Record</title>
+<meta name="description" content="Raymond Alo — business operations and data professional. A record of postings, case files, and how to reach the desk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#13233B;
+    --ink-soft:#4A5568;
+    --paper:#EFF1ED;
+    --paper-raised:#E3E6DF;
+    --brass:#8C5A22;
+    --forest:#2F6F5E;
+    --line:#C3C7BC;
+    --line-soft:#D6D9D0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *, *::before, *::after{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Source Serif 4', serif; font-weight:600; color:var(--ink); margin:0;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--brass); outline-offset:3px;}
+  p{line-height:1.65;}
+
+  .frame{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    min-height:100vh;
+  }
+  @media (max-width:860px){
+    .frame{grid-template-columns:1fr;}
+  }
+
+  /* ---------- SIDEBAR / MANIFEST HEADER ---------- */
+  .desk{
+    border-right:1px solid var(--line);
+    padding:36px 28px;
+    position:sticky;
+    top:0;
+    align-self:start;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  @media (max-width:860px){
+    .desk{position:relative; height:auto; border-right:none; border-bottom:1px solid var(--line); padding:24px 20px;}
+  }
+  .desk-top .name{font-size:1.25rem; letter-spacing:0.01em;}
+  .desk-top .role-line{color:var(--ink-soft); font-size:0.88rem; margin-top:6px; line-height:1.5;}
+  .status-line{
+    margin-top:22px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.82rem;
+    color:var(--forest);
+  }
+  .status-dot{width:7px; height:7px; border-radius:50%; background:var(--forest); flex:none;}
+  .clock{
+    margin-top:4px;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+  }
+
+  nav.desk-nav{margin-top:40px;}
+  nav.desk-nav ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px;}
+  nav.desk-nav a{
+    text-decoration:none;
+    font-size:0.92rem;
+    color:var(--ink-soft);
+    border-left:2px solid transparent;
+    padding-left:10px;
+    transition:color 0.15s, border-color 0.15s;
+  }
+  nav.desk-nav a:hover{color:var(--ink); border-color:var(--brass);}
+  @media (max-width:860px){
+    nav.desk-nav{margin-top:20px;}
+    nav.desk-nav ul{flex-direction:row; flex-wrap:wrap; gap:4px 18px;}
+  }
+
+  .desk-contact{margin-top:40px; font-size:0.82rem; display:flex; flex-direction:column; gap:8px;}
+  .desk-contact a{text-decoration:none; color:var(--ink-soft);}
+  .desk-contact a:hover{color:var(--brass);}
+  @media (max-width:860px){
+    .desk-contact{flex-direction:row; flex-wrap:wrap; gap:6px 18px; margin-top:18px;}
+  }
+
+  /* ---------- MAIN COLUMN ---------- */
+  main{padding:0;}
+  .block > *{max-width:none;}
+  .block > p, .block > .cap-table, .block > .stat-strip, .block > .file, .block > .log-entry, .block > h2, .block > .ctas, .block > .fine, .block > .note{max-width:690px;}
+  .block{
+    padding:70px 40px;
+    border-bottom:1px solid var(--line);
+  }
+  @media (max-width:860px){
+    .block{padding:48px 20px;}
+  }
+  .block:last-of-type{border-bottom:none;}
+
+  /* hero */
+  .hero{padding-top:64px; padding-right:max(40px, calc(100% - 880px));}
+  @media (max-width:860px){ .hero{padding-right:20px;} }
+  .stamp{
+    width:136px; height:136px;
+    border:2px solid var(--brass);
+    outline:1px solid var(--brass);
+    outline-offset:-8px;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    white-space:nowrap;
+    text-align:center;
+    color:var(--brass);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.06em;
+    line-height:1.4;
+    transform:rotate(-9deg) scale(0.6);
+    opacity:0;
+    float:right;
+    margin:4px 0 20px 24px;
+    animation:stamp-down 0.5s cubic-bezier(.2,.9,.3,1.2) 0.35s forwards;
+  }
+  .stamp span{display:block;}
+  .stamp .big{font-size:0.8rem; font-weight:600; letter-spacing:0.08em;}
+  .stamp .mid{font-size:0.8rem; font-weight:600; letter-spacing:0.08em; margin-bottom:6px;}
+  .stamp .small{font-size:0.62rem; font-weight:400;}
+  @keyframes stamp-down{
+    0%{opacity:0; transform:rotate(-9deg) scale(1.7);}
+    60%{opacity:1;}
+    100%{opacity:1; transform:rotate(-9deg) scale(1);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .stamp{opacity:1; transform:rotate(-9deg) scale(1); animation:none;}
+  }
+  @media (max-width:540px){
+    .stamp{float:none; margin:0 0 24px; width:112px; height:112px;}
+  }
+  h1.thesis{
+    font-size:clamp(1.7rem, 3.6vw, 2.5rem);
+    line-height:1.32;
+    font-weight:600;
+    max-width:600px;
+  }
+  .hero p.sub{
+    margin-top:22px;
+    max-width:560px;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+  .hero .ctas{display:flex; gap:14px; flex-wrap:wrap; margin-top:32px; clear:both;}
+  .btn{
+    display:inline-block;
+    padding:11px 20px;
+    font-size:0.88rem;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    transition:background 0.15s, color 0.15s;
+  }
+  .btn.filled{background:var(--ink); color:var(--paper);}
+  .btn.filled:hover{background:var(--brass); border-color:var(--brass);}
+  .btn:not(.filled):hover{background:var(--ink); color:var(--paper);}
+
+  /* section titles */
+  h2.title{font-size:1.5rem; margin-bottom:22px;}
+
+  /* about + stats */
+  .stat-strip{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:28px;
+    border-top:1px solid var(--line-soft);
+  }
+  .stat{
+    flex:1 1 140px;
+    padding:18px 20px 18px 0;
+    border-right:1px solid var(--line-soft);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:'Source Serif 4', serif; font-size:1.6rem; font-weight:600; color:var(--brass);}
+  .stat .label{font-size:0.8rem; color:var(--ink-soft); margin-top:4px; line-height:1.4;}
+
+  /* capabilities table */
+  .cap-table{margin-top:10px; border-top:1px solid var(--line-soft);}
+  .cap-row{
+    display:grid;
+    grid-template-columns:190px 1fr;
+    gap:18px;
+    padding:16px 0;
+    border-bottom:1px solid var(--line-soft);
+  }
+  @media (max-width:600px){
+    .cap-row{grid-template-columns:1fr;}
+  }
+  .cap-row .cat{font-weight:600; font-size:0.92rem;}
+  .cap-row .items{color:var(--ink-soft); font-size:0.92rem; line-height:1.7;}
+
+  /* record / experience log */
+  .log-entry{
+    display:grid;
+    grid-template-columns:148px 1fr;
+    gap:24px;
+    padding:28px 0;
+    border-bottom:1px solid var(--line-soft);
+  }
+  @media (max-width:600px){
+    .log-entry{grid-template-columns:1fr; gap:6px;}
+  }
+  .log-entry:first-of-type{padding-top:4px;}
+  .log-entry .period{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    padding-top:4px;
+  }
+  .log-entry .post{font-size:1.08rem; font-weight:600;}
+  .log-entry .org{font-size:0.88rem; color:var(--forest); margin-top:2px; margin-bottom:12px;}
+  .log-entry ul{margin:0; padding-left:18px; color:var(--ink-soft);}
+  .log-entry li{margin-bottom:7px; font-size:0.93rem; line-height:1.6;}
+  .log-entry li:last-child{margin-bottom:0;}
+
+  /* case files / projects */
+  .file{
+    border:1px solid var(--line);
+    margin-bottom:22px;
+    padding:22px 24px;
+    position:relative;
+  }
+  .file .ref{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .file h3{font-size:1.08rem; margin-bottom:8px;}
+  .file p.desc{font-size:0.92rem; color:var(--ink-soft); margin:0 0 14px;}
+  .file .metric{
+    font-size:0.86rem;
+    color:var(--ink);
+    background:var(--paper-raised);
+    border-left:2px solid var(--brass);
+    padding:8px 12px;
+    margin-bottom:14px;
+    line-height:1.5;
+  }
+  .file .tools{font-size:0.78rem; color:var(--ink-soft); margin-bottom:14px;}
+  .file .flinks{display:flex; gap:18px; flex-wrap:wrap;}
+  .file .flinks a{font-size:0.86rem; text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:3px;}
+  .file .flinks a:hover{text-decoration-color:var(--brass); color:var(--brass);}
+  .note{font-size:0.86rem; color:var(--ink-soft); margin-top:4px;}
+  .note a{text-decoration:underline; text-decoration-color:var(--line);}
+
+  /* desk / contact close */
+  .close p.lead{max-width:540px; color:var(--ink-soft); font-size:1.02rem; margin-top:14px;}
+  .close .ctas{display:flex; gap:14px; flex-wrap:wrap; margin-top:28px;}
+  .fine{margin-top:40px; font-size:0.76rem; color:var(--ink-soft); font-family:'IBM Plex Mono', monospace;}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <aside class="desk">
+    <div>
+      <div class="desk-top">
+        <div class="name mono">RAYMOND ALO</div>
+        <div class="role-line">Business operations &amp; data — plus the admin, support, and virtual-assistant work that keeps a remote team moving.</div>
+      </div>
+      <div class="status-line">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Open for assignment</span>
+      </div>
+      <div class="clock mono" id="deskClock">Lagos —:—</div>
+
+      <nav class="desk-nav" aria-label="Section navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#record">Record</a></li>
+          <li><a href="#files">Case files</a></li>
+          <li><a href="#desk">Reach the desk</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="desk-contact">
+      <a href="mailto:alo.raymond@yahoo.com">alo.raymond@yahoo.com</a>
+      <a href="tel:+2348135256376" class="mono">+234 813 525 6376</a>
+      <a href="https://www.linkedin.com/in/aloraymond" target="_blank" rel="noopener">linkedin.com/in/aloraymond</a>
+      <a href="https://github.com/AloRay" target="_blank" rel="noopener">github.com/AloRay</a>
+    </div>
+  </aside>
+
+  <main>
+
+    <section class="block hero">
+      <div class="stamp" aria-hidden="true"><span class="big">OPEN FOR</span><span class="mid">ASSIGNMENT</span><span class="small">remote or hybrid</span></div>
+      <h1 class="thesis">Most of my work starts the same way: a number that doesn't reconcile, or a process that only lives in one person's head.</h1>
+      <p class="sub">I've spent six years closing that gap — across fleet operations, healthcare records, telecom services, and event logistics — by building the dashboard, the SOP, or the checklist that makes the work trustworthy and repeatable without me standing over it.</p>
+      <div class="ctas">
+        <a class="btn filled" href="#record">Read the record</a>
+        <a class="btn" href="#desk">Reach the desk</a>
+      </div>
+    </section>
+
+    <section class="block" id="about">
+      <h2 class="title">What the job titles have in common</h2>
+      <p>Product operations, healthcare data entry, business operations leadership, event management — on paper these look like four different careers. In practice it's been one job worn four ways: find where information or process has gone unreliable, and build the structure that fixes it — a reconciled dashboard, a documented SOP, a training session, a cleaner CRM pipeline.</p>
+      <p>A good amount of that work is, plainly, administrative — keeping records straight, handling client and vendor queries, running the paperwork behind a launch or a shift handover. I don't treat that as separate from the "data" work; the same attention to detail runs through both, which is why I'm equally at home leading an analysis or carrying the admin, scheduling, and customer-support load that keeps a remote team moving day to day.</p>
+      <p>I work async, across time zones, on whatever system a team already has — and lately that includes using AI tools like Claude and ChatGPT to move faster through code reviews, documentation, and research, with a hard rule against ever putting client or confidential data into them.</p>
+      <div class="stat-strip">
+        <div class="stat"><div class="num">99.9%</div><div class="label">accuracy processing healthcare records under HIPAA</div></div>
+        <div class="stat"><div class="num">60%</div><div class="label">cut in report prep time after standardizing templates</div></div>
+        <div class="stat"><div class="num">30%</div><div class="label">faster client onboarding after documenting the process</div></div>
+        <div class="stat"><div class="num">50K+</div><div class="label">vehicles monitored in real time across 20+ enterprise clients</div></div>
+      </div>
+
+      <div class="cap-table">
+        <div class="cap-row">
+          <div class="cat">Data &amp; reporting</div>
+          <div class="items">SQL, Python, Power BI, Tableau, Looker Studio, Advanced Excel, BigQuery</div>
+        </div>
+        <div class="cap-row">
+          <div class="cat">Admin &amp; client support</div>
+          <div class="items">Virtual assistance, administrative support, customer support, client onboarding, inbox &amp; calendar coordination, scheduling</div>
+        </div>
+        <div class="cap-row">
+          <div class="cat">Operations &amp; process</div>
+          <div class="items">SOP development, quality assurance, HIPAA compliance, process improvement, vendor management</div>
+        </div>
+        <div class="cap-row">
+          <div class="cat">Tools &amp; collaboration</div>
+          <div class="items">Google Workspace, Microsoft Office, HubSpot &amp; Zoho CRM, Slack, MS Teams, Zoom, async distributed teams</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="record">
+      <h2 class="title">The record of postings</h2>
+
+      <div class="log-entry">
+        <div class="period mono">Nov 2025 —<br>present</div>
+        <div>
+          <div class="post">Product Operations Analyst</div>
+          <div class="org">NovaTrack Limited · Lagos, Nigeria (Hybrid)</div>
+          <ul>
+            <li>Support telematics operations for a fleet and asset-management platform monitoring 50,000+ vehicles across 20+ enterprise clients — geofencing, violation tracking, AI dash cams, live location, EPOD, and driver verification.</li>
+            <li>Build and maintain performance dashboards in Excel and Power BI tracking product adoption and uptime; standardized reporting templates, cutting prep time by 60%.</li>
+            <li>Primary liaison between clients, developers, and QA teams, resolving 10–20 bugs per release and contributing to 90% on-time delivery.</li>
+            <li>Trained account managers and client teams across 25+ sessions; manage client queries and incident resolution, lifting customer satisfaction over 30%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="period mono">Jan 2025 —<br>Nov 2025</div>
+        <div>
+          <div class="post">Health Data Entry Admin</div>
+          <div class="org">NextBewe · Remote, United States</div>
+          <ul>
+            <li>Processed thousands of healthcare records daily across multiple custom EHR systems at 99.9% accuracy, under strict HIPAA requirements.</li>
+            <li>Reconciled records across multiple systems to maintain data consistency in a multi-source environment; built cross-check protocols catching 15+ errors a week.</li>
+            <li>Automated repetitive entry tasks, cutting record time by 20% and lifting daily throughput by 15%.</li>
+            <li>Documented SOPs that became the team's standard reference; trained colleagues and supported 24/7 shift handovers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="period mono">Apr 2025 —<br>Jun 2025</div>
+        <div>
+          <div class="post">Sales Development Representative</div>
+          <div class="org">Strade · Remote, Romania (Contract)</div>
+          <ul>
+            <li>Ran outbound campaigns (cold email, LinkedIn) generating qualified opportunities for custom software and SaaS solutions.</li>
+            <li>Managed structured lead and pipeline data within CRM databases (Zoho, HubSpot), with timely follow-up through the sales lifecycle.</li>
+            <li>Scheduled discovery meetings by qualifying leads and communicating the company's value proposition directly to the CEO.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="period mono">Jun 2018 —<br>Apr 2025</div>
+        <div>
+          <div class="post">Data Analyst, Freelance / Remote Support</div>
+          <div class="org">Remote</div>
+          <ul>
+            <li>Wrote SQL queries to consolidate data from multiple sources for recurring management reporting; built dashboards and visualizations in Power BI and Excel.</li>
+            <li>Automated recurring reporting and data-processing tasks with Python; handled ad hoc data and admin requests across remote, cross-time-zone engagements.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="period mono">Jul 2024 —<br>Sep 2024</div>
+        <div>
+          <div class="post">Business Operations Team Lead</div>
+          <div class="org">Briccs International Ideal Limited · Lagos, Nigeria (Hybrid, Contract)</div>
+          <ul>
+            <li>Led cross-functional operations for value-added telecom services (bulk SMS, IVR, USSD), cutting product launch cycles by roughly 25%.</li>
+            <li>Negotiated SLAs with 5+ partners; standardized client onboarding, cutting onboarding time by 30%.</li>
+            <li>Produced weekly KPI dashboards and revenue reports in Excel/Power BI for the MD and clients, maintaining 95%+ on-time revenue collection.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="period mono">Apr 2022 —<br>Mar 2024</div>
+        <div>
+          <div class="post">Operations &amp; Events Manager</div>
+          <div class="org">Atlantic Event Palace · Nigeria (On-site)</div>
+          <ul>
+            <li>Managed daily operations across 5 concurrent venues and 8+ events a month — staff, vendors, budgets, logistics.</li>
+            <li>Cut operational costs by 15% and grew repeat bookings 20% year over year through a better guest-feedback process and vendor coordination.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="period mono">Nov 2013 —<br>Dec 2013</div>
+        <div>
+          <div class="post">Sales Intern</div>
+          <div class="org">PZ Cussons · Lagos, Nigeria (On-site)</div>
+          <ul>
+            <li>Supported field sales operations and administrative reporting during an early-career FMCG internship.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="files">
+      <h2 class="title">Case files — independent data practice</h2>
+      <p style="color:var(--ink-soft); font-size:0.92rem; margin-bottom:28px;">Self-directed projects, built on public or synthetic data so nothing confidential is exposed, to show the same reasoning behind closed, paid work.</p>
+
+      <div class="file">
+        <div class="ref">FILE 01 · mirrors work at NovaTrack</div>
+        <h3>Nova Product Ops &amp; QA Performance Dashboard</h3>
+        <p class="desc">A Power BI dashboard tracking release delivery, QA bug volume, and customer satisfaction for a simulated product-operations team.</p>
+        <div class="metric">93.8% on-time delivery tracked across 48 releases and 681 bugs</div>
+        <div class="tools">Python, SQL/SQLite, Power BI, DAX</div>
+        <div class="flinks">
+          <a href="https://github.com/AloRay/Nova-Product-Ops-QA-Performance-Dashboard" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://www.loom.com/embed/bebe845a16ac4ad3a479a441c106a6b8" target="_blank" rel="noopener">Watch the walkthrough</a>
+        </div>
+      </div>
+
+      <div class="file">
+        <div class="ref">FILE 02 · mirrors work at NextBewe</div>
+        <h3>NextBewe Health Data Quality &amp; Compliance Audit</h3>
+        <p class="desc">A Python and SQL pipeline that finds, fixes, and documents data-quality issues across 25,000+ simulated multi-system healthcare records.</p>
+        <div class="metric">172 duplicate patients found and merged across 4 simulated EHR systems</div>
+        <div class="tools">Python (pandas), SQL/SQLite, Power BI, DAX</div>
+        <div class="flinks">
+          <a href="https://github.com/AloRay/Nextbewe-Health-Data-Quality-Compliance-Audit" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://www.loom.com/share/8740adf996914466aacf4bb87324470c" target="_blank" rel="noopener">Watch the walkthrough</a>
+        </div>
+      </div>
+
+      <div class="file">
+        <div class="ref">FILE 03 · most recent</div>
+        <h3>Online Retail Sales &amp; Customer Intelligence Dashboard</h3>
+        <p class="desc">A Python, SQL, and Power BI pipeline analyzing 541,909 real transactions from a UK online retailer — revenue by country, RFM customer segmentation, a conversion funnel.</p>
+        <div class="metric">£10.6M in revenue analyzed across 19,960 orders</div>
+        <div class="tools">Python (pandas), SQL/SQLite, Power BI, DAX</div>
+        <div class="flinks">
+          <a href="https://github.com/AloRay/online-retail-sales-dashboard" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://www.loom.com/share/394c82ee61334c0da04717083b12518e" target="_blank" rel="noopener">Watch the walkthrough</a>
+        </div>
+      </div>
+
+      <div class="file">
+        <div class="ref">FILE 04 · complementary technique</div>
+        <h3>Customer Segmentation, K-Means</h3>
+        <p class="desc">Clustering customers by spending habits, age, and income to support more targeted marketing — unsupervised learning, a different technique from the dashboards above.</p>
+        <div class="tools">Python, scikit-learn, K-Means, Seaborn</div>
+        <div class="flinks">
+          <a href="https://github.com/AloRay/CUSTOMER-SEGREGATION-K-MEANS-" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+
+      <p class="note">Also on GitHub: time-series forecasting (ARIMA/Prophet) on retail sales, a credit-card fraud detection model, and natural-gas price forecasting. More at <a href="https://github.com/AloRay?tab=repositories" target="_blank" rel="noopener">github.com/AloRay</a>.</p>
+    </section>
+
+    <section class="block close" id="desk">
+      <h2 class="title">Reach the desk</h2>
+      <p class="lead">If there's operational chaos that needs a system behind it — or a team that needs a reliable remote hand on admin, support, or data — I'm open to hearing about it.</p>
+      <div class="ctas">
+        <a class="btn filled" href="mailto:alo.raymond@yahoo.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/aloraymond" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+      <div class="fine">Raymond Alo — last updated <span id="year"></span>. Built by hand, not from a template.</div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function updateClock(){
+    const el = document.getElementById('deskClock');
+    if(!el) return;
+    try{
+      const fmt = new Intl.DateTimeFormat('en-GB', { timeZone:'Africa/Lagos', hour:'2-digit', minute:'2-digit', hour12:false });
+      el.textContent = 'Lagos ' + fmt.format(new Date());
+    }catch(e){
+      el.textContent = '';
+    }
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
+</script>
+
+</body>
+</html>
